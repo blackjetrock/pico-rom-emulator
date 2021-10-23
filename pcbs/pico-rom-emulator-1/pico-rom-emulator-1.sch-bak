@@ -71,23 +71,23 @@ $EndComp
 $Comp
 L Memory_EPROM:27C512 U3
 U 1 1 611F9EB4
-P 3200 6375
-F 0 "U3" H 3200 7656 50  0000 C CNN
-F 1 "27C512" H 3200 7565 50  0000 C CNN
-F 2 "Package_DIP:DIP-28_W15.24mm" H 3200 6375 50  0001 C CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc0015.pdf" H 3200 6375 50  0001 C CNN
-	1    3200 6375
+P 1900 6400
+F 0 "U3" H 1900 7681 50  0000 C CNN
+F 1 "27C512" H 1900 7590 50  0000 C CNN
+F 2 "Package_DIP:DIP-28_W15.24mm" H 1900 6400 50  0001 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/doc0015.pdf" H 1900 6400 50  0001 C CNN
+	1    1900 6400
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0101
 U 1 1 611FB6EE
-P 3200 7475
-F 0 "#PWR0101" H 3200 7225 50  0001 C CNN
-F 1 "GND" H 3205 7302 50  0000 C CNN
-F 2 "" H 3200 7475 50  0001 C CNN
-F 3 "" H 3200 7475 50  0001 C CNN
-	1    3200 7475
+P 1900 7500
+F 0 "#PWR0101" H 1900 7250 50  0001 C CNN
+F 1 "GND" H 1905 7327 50  0000 C CNN
+F 2 "" H 1900 7500 50  0001 C CNN
+F 3 "" H 1900 7500 50  0001 C CNN
+	1    1900 7500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -189,8 +189,6 @@ Text GLabel 8625 3900 2    50   Input ~ 0
 A12
 Text GLabel 8625 3800 2    50   Input ~ 0
 A13
-Text GLabel 2800 6975 0    50   Input ~ 0
-A15
 Text GLabel 8625 3300 2    50   Input ~ 0
 OE
 Text GLabel 8625 3100 2    50   Input ~ 0
@@ -288,7 +286,7 @@ A13
 Text GLabel 2850 1775 2    50   Input ~ 0
 A14
 Text GLabel 2850 1875 2    50   Input ~ 0
-A15
+DDIR_A15
 Text GLabel 3650 1175 0    50   Input ~ 0
 EMA0
 Text GLabel 3650 1275 0    50   Input ~ 0
@@ -318,7 +316,7 @@ EMA12
 Text GLabel 1850 1675 0    50   Input ~ 0
 EMA13
 Text GLabel 1850 1775 0    50   Input ~ 0
-EMA14
+EMA14_OE
 Text GLabel 1850 1875 0    50   Input ~ 0
 EMA15
 $Comp
@@ -420,56 +418,54 @@ Text GLabel 1825 3550 0    50   Input ~ 0
 EMCE
 Text GLabel 1825 3650 0    50   Input ~ 0
 EMOE
-Text GLabel 3600 5475 2    50   Input ~ 0
+Text GLabel 2300 5500 2    50   Input ~ 0
 EMD0
-Text GLabel 3600 5575 2    50   Input ~ 0
+Text GLabel 2300 5600 2    50   Input ~ 0
 EMD1
-Text GLabel 3600 5675 2    50   Input ~ 0
+Text GLabel 2300 5700 2    50   Input ~ 0
 EMD2
-Text GLabel 3600 5775 2    50   Input ~ 0
+Text GLabel 2300 5800 2    50   Input ~ 0
 EMD3
-Text GLabel 3600 5875 2    50   Input ~ 0
+Text GLabel 2300 5900 2    50   Input ~ 0
 EMD4
-Text GLabel 3600 5975 2    50   Input ~ 0
+Text GLabel 2300 6000 2    50   Input ~ 0
 EMD5
-Text GLabel 3600 6075 2    50   Input ~ 0
+Text GLabel 2300 6100 2    50   Input ~ 0
 EMD6
-Text GLabel 3600 6175 2    50   Input ~ 0
+Text GLabel 2300 6200 2    50   Input ~ 0
 EMD7
-Text GLabel 2800 5475 0    50   Input ~ 0
+Text GLabel 1500 5500 0    50   Input ~ 0
 EMA0
-Text GLabel 2800 5575 0    50   Input ~ 0
+Text GLabel 1500 5600 0    50   Input ~ 0
 EMA1
-Text GLabel 2800 5675 0    50   Input ~ 0
+Text GLabel 1500 5700 0    50   Input ~ 0
 EMA2
-Text GLabel 2800 5775 0    50   Input ~ 0
+Text GLabel 1500 5800 0    50   Input ~ 0
 EMA3
-Text GLabel 2800 5875 0    50   Input ~ 0
+Text GLabel 1500 5900 0    50   Input ~ 0
 EMA4
-Text GLabel 2800 5975 0    50   Input ~ 0
+Text GLabel 1500 6000 0    50   Input ~ 0
 EMA5
-Text GLabel 2800 6075 0    50   Input ~ 0
+Text GLabel 1500 6100 0    50   Input ~ 0
 EMA6
-Text GLabel 2800 6175 0    50   Input ~ 0
+Text GLabel 1500 6200 0    50   Input ~ 0
 EMA7
-Text GLabel 2800 6275 0    50   Input ~ 0
+Text GLabel 1500 6300 0    50   Input ~ 0
 EMA8
-Text GLabel 2800 6375 0    50   Input ~ 0
+Text GLabel 1500 6400 0    50   Input ~ 0
 EMA9
-Text GLabel 2800 6475 0    50   Input ~ 0
+Text GLabel 1500 6500 0    50   Input ~ 0
 EMA10
-Text GLabel 2800 6575 0    50   Input ~ 0
+Text GLabel 1500 6600 0    50   Input ~ 0
 EMA11
-Text GLabel 2800 6675 0    50   Input ~ 0
+Text GLabel 1500 6700 0    50   Input ~ 0
 EMA12
-Text GLabel 2800 6775 0    50   Input ~ 0
+Text GLabel 1500 6800 0    50   Input ~ 0
 EMA13
-Text GLabel 2800 7175 0    50   Input ~ 0
+Text GLabel 1500 7200 0    50   Input ~ 0
 EMCE
-Text GLabel 2800 7275 0    50   Input ~ 0
+Text GLabel 1500 7300 0    50   Input ~ 0
 EMOE
-Text GLabel 3500 4450 0    50   Input ~ 0
-DATA_DIR
 Text GLabel 5300 5200 2    50   Input ~ 0
 EMOE
 $Comp
@@ -484,17 +480,7 @@ F 3 "~" H 5100 5100 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	5300 5100 5675 5100
-Wire Wire Line
-	5675 5100 5675 4675
-Wire Wire Line
-	5675 4675 4500 4675
-Wire Wire Line
 	4500 4675 4500 5125
-Wire Wire Line
-	4500 5125 3500 5125
-Wire Wire Line
-	3500 5125 3500 4550
 $Comp
 L Device:R_Small R2
 U 1 1 61216D9C
@@ -638,65 +624,63 @@ Wire Wire Line
 	1100 4650 1100 4550
 Wire Wire Line
 	1100 4550 1825 4550
-Text GLabel 8625 3400 2    50   Input ~ 0
-A15
 Text GLabel 5300 5000 2    50   Input ~ 0
-A14_OE
+EMA14_OE
 Text GLabel 8625 3600 2    50   Input ~ 0
 A14
-Text GLabel 2800 6875 0    50   Input ~ 0
-A14_OE
+Text GLabel 1500 6900 0    50   Input ~ 0
+EMA14_OE
 $Comp
-L Device:C_Small C?
+L Device:C_Small C1
 U 1 1 6124543A
 P 5275 1375
-F 0 "C?" H 5367 1421 50  0000 L CNN
+F 0 "C1" H 5367 1421 50  0000 L CNN
 F 1 "C_Small" H 5367 1330 50  0000 L CNN
-F 2 "" H 5275 1375 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5275 1375 50  0001 C CNN
 F 3 "~" H 5275 1375 50  0001 C CNN
 	1    5275 1375
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C?
+L Device:C_Small C2
 U 1 1 61245C1C
 P 5800 1375
-F 0 "C?" H 5892 1421 50  0000 L CNN
+F 0 "C2" H 5892 1421 50  0000 L CNN
 F 1 "C_Small" H 5892 1330 50  0000 L CNN
-F 2 "" H 5800 1375 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5800 1375 50  0001 C CNN
 F 3 "~" H 5800 1375 50  0001 C CNN
 	1    5800 1375
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C?
+L Device:C_Small C3
 U 1 1 612463DB
 P 6350 1375
-F 0 "C?" H 6442 1421 50  0000 L CNN
+F 0 "C3" H 6442 1421 50  0000 L CNN
 F 1 "C_Small" H 6442 1330 50  0000 L CNN
-F 2 "" H 6350 1375 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6350 1375 50  0001 C CNN
 F 3 "~" H 6350 1375 50  0001 C CNN
 	1    6350 1375
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C?
+L Device:C_Small C4
 U 1 1 6124666C
 P 6750 1375
-F 0 "C?" H 6842 1421 50  0000 L CNN
+F 0 "C4" H 6842 1421 50  0000 L CNN
 F 1 "C_Small" H 6842 1330 50  0000 L CNN
-F 2 "" H 6750 1375 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6750 1375 50  0001 C CNN
 F 3 "~" H 6750 1375 50  0001 C CNN
 	1    6750 1375
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C_Small C?
+L Device:C_Small C5
 U 1 1 612468D9
 P 7275 1375
-F 0 "C?" H 7367 1421 50  0000 L CNN
+F 0 "C5" H 7367 1421 50  0000 L CNN
 F 1 "C_Small" H 7367 1330 50  0000 L CNN
-F 2 "" H 7275 1375 50  0001 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 7275 1375 50  0001 C CNN
 F 3 "~" H 7275 1375 50  0001 C CNN
 	1    7275 1375
 	1    0    0    -1  
@@ -744,10 +728,10 @@ Connection ~ 5800 950
 Wire Wire Line
 	7275 950  7275 1275
 $Comp
-L power:GND #PWR?
+L power:GND #PWR02
 U 1 1 612544DD
 P 6350 1900
-F 0 "#PWR?" H 6350 1650 50  0001 C CNN
+F 0 "#PWR02" H 6350 1650 50  0001 C CNN
 F 1 "GND" H 6355 1727 50  0000 C CNN
 F 2 "" H 6350 1900 50  0001 C CNN
 F 3 "" H 6350 1900 50  0001 C CNN
@@ -755,10 +739,10 @@ F 3 "" H 6350 1900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR01
 U 1 1 6125702E
 P 6350 800
-F 0 "#PWR?" H 6350 650 50  0001 C CNN
+F 0 "#PWR01" H 6350 650 50  0001 C CNN
 F 1 "+3V3" H 6365 973 50  0000 C CNN
 F 2 "" H 6350 800 50  0001 C CNN
 F 3 "" H 6350 800 50  0001 C CNN
@@ -771,27 +755,122 @@ Wire Wire Line
 	6350 1675 6350 1900
 Connection ~ 4150 875 
 $Comp
-L Connector:Conn_01x03_Female J?
+L Connector:Conn_01x03_Female J2
 U 1 1 6125BDB8
-P 7925 5650
-F 0 "J?" V 7771 5798 50  0000 L CNN
-F 1 "Conn_01x03_Female" V 7862 5798 50  0000 L CNN
-F 2 "" H 7925 5650 50  0001 C CNN
-F 3 "~" H 7925 5650 50  0001 C CNN
-	1    7925 5650
-	0    1    1    0   
+P 7550 5700
+F 0 "J2" H 7442 5375 50  0000 C CNN
+F 1 "Conn_01x03_Female" H 7442 5466 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 7550 5700 50  0001 C CNN
+F 3 "~" H 7550 5700 50  0001 C CNN
+	1    7550 5700
+	-1   0    0    1   
+$EndComp
+Text GLabel 8625 3400 2    50   Input ~ 0
+DDIR_A15
+$Comp
+L Connector:Conn_01x03_Female J3
+U 1 1 6126F915
+P 5100 5650
+F 0 "J3" H 4992 5935 50  0000 C CNN
+F 1 "Conn_01x03_Female" H 4992 5844 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5100 5650 50  0001 C CNN
+F 3 "~" H 5100 5650 50  0001 C CNN
+	1    5100 5650
+	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	7825 4600 7825 5450
+	5375 5650 5300 5650
 Wire Wire Line
-	8025 4600 8025 5450
+	4500 5125 3400 5125
 Wire Wire Line
-	7925 4650 8225 4650
+	3400 5125 3400 4550
 Wire Wire Line
-	8225 4650 8225 5200
+	3400 4550 3500 4550
 Wire Wire Line
-	8225 5200 7925 5200
+	5375 5300 3275 5300
 Wire Wire Line
-	7925 5200 7925 5450
-Connection ~ 7925 4650
+	3275 5300 3275 4450
+Wire Wire Line
+	3275 4450 3500 4450
+Wire Wire Line
+	5375 5300 5375 5650
+Wire Wire Line
+	5950 5100 5950 4675
+Wire Wire Line
+	5300 5100 5950 5100
+Wire Wire Line
+	4500 4675 5950 4675
+Text GLabel 5300 5750 2    50   Input ~ 0
+DDIR_A15
+$Comp
+L Device:R_Small R7
+U 1 1 61282E0C
+P 6075 5775
+F 0 "R7" H 6134 5821 50  0000 L CNN
+F 1 "R_Small" H 6134 5730 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 6075 5775 50  0001 C CNN
+F 3 "~" H 6075 5775 50  0001 C CNN
+	1    6075 5775
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0117
+U 1 1 61282E12
+P 6075 5975
+F 0 "#PWR0117" H 6075 5725 50  0001 C CNN
+F 1 "GND" H 6080 5802 50  0000 C CNN
+F 2 "" H 6075 5975 50  0001 C CNN
+F 3 "" H 6075 5975 50  0001 C CNN
+	1    6075 5975
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6075 5975 6075 5875
+Wire Wire Line
+	6075 5550 6075 5675
+Wire Wire Line
+	5300 5550 6075 5550
+Text GLabel 1500 7000 0    50   Input ~ 0
+EMA15
+NoConn ~ 2825 3750
+NoConn ~ 2825 3850
+NoConn ~ 2825 3950
+NoConn ~ 2825 4050
+NoConn ~ 2825 4150
+NoConn ~ 2825 4250
+NoConn ~ 1825 3750
+NoConn ~ 1825 3850
+NoConn ~ 1825 3950
+NoConn ~ 1825 4050
+NoConn ~ 1825 4150
+NoConn ~ 1825 4250
+NoConn ~ 8625 2500
+NoConn ~ 8625 2600
+NoConn ~ 8625 2800
+NoConn ~ 8625 3000
+NoConn ~ 8625 3500
+NoConn ~ 1900 5300
+$Comp
+L power:GND #PWR0118
+U 1 1 612C4853
+P 8000 5900
+F 0 "#PWR0118" H 8000 5650 50  0001 C CNN
+F 1 "GND" H 8005 5727 50  0000 C CNN
+F 2 "" H 8000 5900 50  0001 C CNN
+F 3 "" H 8000 5900 50  0001 C CNN
+	1    8000 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7750 5700 8000 5700
+Wire Wire Line
+	8000 5700 8000 5900
+Text GLabel 7825 4600 3    50   Input ~ 0
+SWCLK
+Text GLabel 7750 5800 2    50   Input ~ 0
+SWCLK
+Text GLabel 8025 4600 3    50   Input ~ 0
+SWDIO
+Text GLabel 7750 5600 2    50   Input ~ 0
+SWDIO
 $EndSCHEMATC

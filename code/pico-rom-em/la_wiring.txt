@@ -1,0 +1,13 @@
+1   SCLK     A00
+2   SMR      A01
+3   SS       A02
+4   SOE      A04
+5   SPGM     A03
+6   D7       A08
+7   D6       A09
+8   D5       A10
+9   D4       A11
+10  D3       A12
+11  D2       A13
+12  D1       A14
+13  D0       A15

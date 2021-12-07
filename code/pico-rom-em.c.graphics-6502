@@ -1,0 +1,366 @@
+////////////////////////////////////////////////////////////////////////////////
+//
+// Pico ROM Emulator
+//
+////////////////////////////////////////////////////////////////////////////////
+
+
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include "pico/stdlib.h"
+//#include "hardware/i2c.h"
+#include "hardware/pio.h"
+#include "hardware/clocks.h"
+#include "pico/multicore.h"
+
+#include "f_util.h"
+
+#include "ff.h"
+#include "ff_stdio.h"
+#include "hw_config.h"
+#include "my_debug.h"
+#include "rtc.h"
+#include "sd_card.h"
+
+// Use this if breakpoints don't work
+#define DEBUG_STOP {volatile int x = 1; while(x) {} }
+
+//-----------------------------------------------------------------------------
+//
+// ROM Emulator Flags
+
+// OE pin used to switch data direction
+// If 0 then DDIR_A15 used, under processor conrol
+
+#define USE_OE_FOR_DATA_DIRECTION 1
+
+// The address lines we are looking at
+
+
+#define ROM_SIZE  2*1024
+#define ADDRESS_MASK (ROM_SIZE - 1)
+
+// Map from memory space to ROM address space
+#define MAP_ROM(X) (X & ADDRESS_MASK)
+
+uint8_t rom_data[ROM_SIZE];
+
+//------------------------------------------------------------------------------
+
+const int D0_PIN = 0;
+const int D1_PIN = 1;
+const int D2_PIN = 2;
+const int D3_PIN = 3;
+const int D4_PIN = 4;
+const int D5_PIN = 5;
+const int D6_PIN = 6;
+const int D7_PIN = 7;
+
+//
+// The address lines (always inputs)
+//
+const int  A0_PIN  =  8;
+const int  A1_PIN  =  9;
+const int  A2_PIN  = 10;
+const int  A3_PIN  = 11;
+const int  A4_PIN  = 12;
+const int  A5_PIN  = 13;
+const int  A6_PIN  = 14;
+const int  A7_PIN  = 15;
+const int  A8_PIN  = 16;
+const int  A9_PIN  = 17;
+const int  A10_PIN = 18;
+const int  A11_PIN = 19;
+const int  A12_PIN = 20;
+const int  A13_PIN = 21;
+const int  A14_PIN = 22;
+const int  DDIR_A15_PIN = 26;
+
+const int OE_PIN = 27;
+const int CE_PIN = 28;
+
+// Arrays for setting GPIOs up
+#define NUM_ADDR 16
+#define NUM_DATA 8
+
+const int address_pins[NUM_ADDR] =
+  {
+   A0_PIN,
+   A1_PIN,
+   A2_PIN,
+   A3_PIN,
+   A4_PIN,
+   A5_PIN,
+   A6_PIN,
+   A7_PIN,
+   A8_PIN,
+   A9_PIN,
+   A10_PIN,
+   A11_PIN,
+   A12_PIN,
+   A13_PIN,
+   A14_PIN,
+   DDIR_A15_PIN,
+  };
+
+const int data_pins[NUM_DATA] =
+  {
+   D0_PIN,
+   D1_PIN,
+   D2_PIN,
+   D3_PIN,
+   D4_PIN,
+   D5_PIN,
+   D6_PIN,
+   D7_PIN,
+  };
+
+////////////////////////////////////////////////////////////////////////////////
+
+//-----------------------------------------------------------------------------
+//
+// Put a value on the data bus
+
+inline void set_data(BYTE data)
+{
+  int states;
+  int dat = data & 0xff;
+  
+  // Direct register access to make things faster
+  sio_hw->gpio_set = (  dat  << 0);
+  sio_hw->gpio_clr = ((dat ^ 0xFF) << 0);
+}
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+//
+// Set things up then sit in a loop waiting for the emulated devcie to
+// be selected
+//
+////////////////////////////////////////////////////////////////////////////////
+
+#define MAX_ADDR_TRACE 256
+
+
+int main()
+{
+  int addr_trace_index = 0;
+  volatile uint32_t addr_trace[MAX_ADDR_TRACE];
+  int trace_on = 0;
+
+#if 1
+  // Set up test program
+  rom_data[MAP_ROM(0xFFFC)] = 0x00;
+  rom_data[MAP_ROM(0xFFFD)] = 0xF8;
+  rom_data[MAP_ROM(0xFFFE)] = 0x00;
+  rom_data[MAP_ROM(0xFFFF)] = 0xF8;
+
+  rom_data[MAP_ROM(0xF800)] = 0xE8;
+  rom_data[MAP_ROM(0xF801)] = 0x4C;
+  rom_data[MAP_ROM(0xF802)] = 0x00;
+  rom_data[MAP_ROM(0xF803)] = 0xF8;
+#endif
+
+#if 0
+  for(int i=0; i< 2048; i+=4)
+    {
+      rom_data[MAP_ROM(i+0)] = 0xEB;
+      rom_data[MAP_ROM(i+1)] = 0x4C;
+      rom_data[MAP_ROM(i+2)] = 0x00;
+      rom_data[MAP_ROM(i+3)] = 0xF8;
+    }
+
+  rom_data[MAP_ROM(0xFFFC)] = 0x00;
+  rom_data[MAP_ROM(0xFFFD)] = 0xF8;
+  rom_data[MAP_ROM(0xFFFE)] = 0x00;
+  rom_data[MAP_ROM(0xFFFF)] = 0xF8;
+#endif
+
+#if 0
+    for(int i=0; i< 2048; i+=4)
+    {
+      rom_data[i] = 0x4c;
+    }
+#endif
+    
+  //DEBUG_STOP;
+  
+  char line[80];
+
+  stdio_init_all();
+
+  printf("\nPico ROM Emulator\n");
+  
+#if TEST_STDIO
+  {
+  int count;
+  while (true)
+    {
+      count++;
+      
+      if( (count % 1000000) == 0 )
+	{
+	  sprintf(line, "\nRP2040: %d", count);
+	  printf(line);
+	}
+    }
+  }
+#endif
+
+  printf("\nSetting GPIOs...");
+
+  for (int i=0; i<NUM_ADDR; i++)
+    {
+      // Set up directions for the control lines
+      gpio_init(address_pins[i]);
+      gpio_set_dir(address_pins[i], GPIO_IN);
+    }
+
+  for (int i=0; i<NUM_DATA; i++)
+    {
+      // Set up directions for the control lines
+      gpio_init(data_pins[i]);
+      gpio_set_dir(data_pins[i], GPIO_OUT);
+    }
+
+  gpio_init(OE_PIN);
+  gpio_set_dir(OE_PIN, GPIO_IN);
+  gpio_init(CE_PIN);
+  gpio_set_dir(CE_PIN, GPIO_IN);
+
+  // DEBUG: Use DDIR_A15 as status line
+  gpio_init(DDIR_A15_PIN);
+  gpio_set_dir(DDIR_A15_PIN, GPIO_OUT);
+
+  int ce = 0;
+
+#if 0
+  while(1)
+    {
+      ce = gpio_get(CE_PIN);
+      gpio_put(DDIR_A15_PIN, ce);
+    }
+#endif
+
+#if 0
+  while(1)
+    {
+      uint32_t gpio_states;
+      gpio_states = sio_hw->gpio_in;
+      if( gpio_states & (1 << CE_PIN))
+	{
+	  gpio_put(DDIR_A15_PIN, 1);
+	}
+      else
+	{
+	  gpio_put(DDIR_A15_PIN, 0);
+	}
+    }
+#endif
+
+  
+  //set_data_outputs();
+#if 0
+#if !USE_OE_FOR_DATA_DIRECTION
+
+
+  // LS_DIR is an output
+  gpio_set_dir(LS_DIR_PIN, GPIO_OUT);
+#else
+  gpio_put(DDIR_A15_PIN, 0);
+  gpio_set_dir(DDIR_A15_PIN, GPIO_OUT);
+#endif
+#endif
+  
+
+  // Use a polling loop for minimum latency
+#if 1
+  // Turn off timer interrupts
+  irq_set_mask_enabled(0xf, false);
+#endif
+  
+  // We set the CE of the level shifters to be driven by OE on the
+  // host board, and the direction (A->B) to be set up by the Pico
+  // The data direction can be left as output from the Pico as
+  // the OE/CE line will drive on to the data bus when OE is asserted
+  volatile unsigned int number_ce_assert = 0;
+
+#if 0
+  while(1)
+    {
+      set_data(0xf8);
+    }
+#endif
+  
+  while(1)
+    {
+      uint32_t gpio_states;
+      BYTE db;
+      unsigned int addr;
+
+      //      gpio_put(DDIR_A15_PIN, 1);
+      
+      // read GPIOs
+      gpio_states = sio_hw->gpio_in;
+
+#if 0
+      // We look for CE
+      if( gpio_states & (1 << CE_PIN) )
+	{
+	  // CE high, we are not selected
+	}
+      else
+	{
+#endif
+	  
+	  // CE low, we are selected
+	  // ROM emulation so always a read of us
+	  // get address
+	  addr = (gpio_states >> 8) & ADDRESS_MASK;
+
+	  // Get data and present it on bus
+	  	  set_data(rom_data[addr]);
+	  //set_data(0xF8);
+	  
+	  // Trace address
+	  if( addr == 0x07fc )
+	    {
+	      trace_on = 1;
+	    }
+	  
+	  if( trace_on)
+	    {
+	      if( addr_trace_index < MAX_ADDR_TRACE )
+		{
+		  addr_trace[addr_trace_index] = addr | (rom_data[addr] << 16);
+		  addr_trace_index++;
+		  addr_trace_index %= MAX_ADDR_TRACE;
+		  
+		}
+	    }
+    	  number_ce_assert++;
+#if 0
+	  // Wait for CE to be de-asserted
+	  while(1)
+	    {
+	      gpio_states = sio_hw->gpio_in;
+	  
+	      // We look for CE
+	      if( gpio_states & (1 << CE_PIN) )
+		{
+		  // CE high, we are not selected
+		  break;
+		}
+	      
+	    }
+#endif
+	}
+
+      //      gpio_put(DDIR_A15_PIN, 0);
+#if 0
+    }
+#endif
+}

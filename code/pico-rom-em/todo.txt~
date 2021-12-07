@@ -1,0 +1,15 @@
+Possible Future Additions
+=========================
+
+1. Write to paknnnn.opk and a lastpak.opk, maybe put that at start of list
+   so quick to load.
+
+2. Maybe have an autoload.pak so that when switche don the same datapak is
+   present automatically, giving a sort of non volatile RAM buffer.
+
+3. Sort out pak size problems. At present only emulates a 32K RAMPAK. Other
+   sizes would be nice.
+   
+4. Check read-only functionality works.
+
+  

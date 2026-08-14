@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "pico-rom-emulator-1-cache") (type "Legacy") (uri "/home/menadue/tree/github/pico-rom-emulator/pcbs/pico-rom-emulator-1/pico-rom-emulator-1-cache.lib") (options "") (descr "Legacy project cache library"))
+)

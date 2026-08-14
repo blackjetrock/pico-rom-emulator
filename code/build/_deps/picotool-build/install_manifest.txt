@@ -1,0 +1,5 @@
+/home/menadue/tree/github/pico-rom-emulator/code/build/_deps/picotool/picotool
+/home/menadue/tree/github/pico-rom-emulator/code/build/_deps/picotool/picotoolTargets.cmake
+/home/menadue/tree/github/pico-rom-emulator/code/build/_deps/picotool/picotoolTargets-release.cmake
+/home/menadue/tree/github/pico-rom-emulator/code/build/_deps/picotool/picotoolConfig.cmake
+/home/menadue/tree/github/pico-rom-emulator/code/build/_deps/picotool/picotoolConfigVersion.cmake

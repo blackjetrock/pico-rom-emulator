@@ -11,7 +11,7 @@ set(PICO_SDK_PATH "/tree/downloaded_tools/pico/pico-sdk")
 
 # Pull in Raspberry Pi Pico SDK (must be before project)
 include(pico_sdk_import.cmake)
-include(pico_extras_import.cmake)
+#include(pico_extras_import.cmake)
 
 project(pico-rom-em C CXX ASM)
 
@@ -19,7 +19,7 @@ project(pico-rom-em C CXX ASM)
 pico_sdk_init()
 
 # SD FAT LIB
-add_subdirectory(../no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI build)
+#add_subdirectory(../no-OS-FatFS-SD-SPI-RPi-Pico/FatFs_SPI build)
 
 # Add executable. Default name is the project name, version 0.1
 
@@ -45,9 +45,9 @@ target_link_libraries(pico-rom-em
         hardware_pio
         hardware_clocks
 	hardware_adc
-        pico_sd_card
+#        pico_sd_card
         pico_multicore
-	FatFs_SPI
+#	FatFs_SPI
         )
 
 pico_add_extra_outputs(pico-rom-em)

@@ -1,0 +1,14 @@
+# Target labels
+ picotoolBuild
+# Source files and their labels
+/home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/picotoolBuild
+/home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/picotoolBuild.rule
+/home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/picotoolBuild-complete.rule
+/home/menadue/tree/github/pico-rom-emulator/code/build/picotool/src/picotoolBuild-stamp/picotoolBuild-build.rule
+/home/menadue/tree/github/pico-rom-emulator/code/build/picotool/src/picotoolBuild-stamp/picotoolBuild-configure.rule
+/home/menadue/tree/github/pico-rom-emulator/code/build/picotool/src/picotoolBuild-stamp/picotoolBuild-download.rule
+/home/menadue/tree/github/pico-rom-emulator/code/build/picotool/src/picotoolBuild-stamp/picotoolBuild-install.rule
+/home/menadue/tree/github/pico-rom-emulator/code/build/picotool/src/picotoolBuild-stamp/picotoolBuild-mkdir.rule
+/home/menadue/tree/github/pico-rom-emulator/code/build/picotool/src/picotoolBuild-stamp/picotoolBuild-patch.rule
+/home/menadue/tree/github/pico-rom-emulator/code/build/picotool/src/picotoolBuild-stamp/picotoolBuild-test.rule
+/home/menadue/tree/github/pico-rom-emulator/code/build/picotool/src/picotoolBuild-stamp/picotoolBuild-update.rule

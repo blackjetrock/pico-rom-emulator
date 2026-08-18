@@ -44,7 +44,7 @@ target_link_libraries(pico-rom-em
         #hardware_i2c
         hardware_pio
         hardware_clocks
-	hardware_adc
+#	hardware_adc
 #        pico_sd_card
         pico_multicore
 #	FatFs_SPI

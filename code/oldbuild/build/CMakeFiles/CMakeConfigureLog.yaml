@@ -1,0 +1,542 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineSystem.cmake:200 (message)"
+      - "CMakeLists.txt:16 (project)"
+    message: |
+      The target system is: PICO -  - cortex-m0plus
+      The host system is: Linux - 6.19.14-200.fc43.x86_64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:16 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /usr/bin/arm-none-eabi-gcc 
+      Build flags: -mcpu=cortex-m0plus;-mthumb
+      Id flags:  
+      
+      The output was:
+      1
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-exit.o): in function `exit':
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/stdlib/exit.c:65:(.text.exit+0x16): undefined reference to `_exit'
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: (_exit): Unknown destination type (ARM/Thumb) in /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-exit.o)
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/stdlib/exit.c:65:(.text.exit+0x16): dangerous relocation: unsupported relocation
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-closer.o): in function `_close_r':
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/reent/closer.c:47:(.text._close_r+0xc): undefined reference to `_close'
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: (_close): Unknown destination type (ARM/Thumb) in /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-closer.o)
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/reent/closer.c:47:(.text._close_r+0xc): dangerous relocation: unsupported relocation
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-lseekr.o): in function `_lseek_r':
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/reent/lseekr.c:49:(.text._lseek_r+0x10): undefined reference to `_lseek'
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: (_lseek): Unknown destination type (ARM/Thumb) in /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-lseekr.o)
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/reent/lseekr.c:49:(.text._lseek_r+0x10): dangerous relocation: unsupported relocation
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-readr.o): in function `_read_r':
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/reent/readr.c:49:(.text._read_r+0x10): undefined reference to `_read'
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: (_read): Unknown destination type (ARM/Thumb) in /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-readr.o)
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/reent/readr.c:49:(.text._read_r+0x10): dangerous relocation: unsupported relocation
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-writer.o): in function `_write_r':
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/reent/writer.c:49:(.text._write_r+0x10): undefined reference to `_write'
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: (_write): Unknown destination type (ARM/Thumb) in /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-writer.o)
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/reent/writer.c:49:(.text._write_r+0x10): dangerous relocation: unsupported relocation
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/reent/sbrkr.c:51:(.text._sbrk_r+0xc): undefined reference to `_sbrk'
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: (_sbrk): Unknown destination type (ARM/Thumb) in /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-sbrkr.o)
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/reent/sbrkr.c:51:(.text._sbrk_r+0xc): dangerous relocation: unsupported relocation
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:16 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/arm-none-eabi-gcc 
+      Build flags: -mcpu=cortex-m0plus;-mthumb
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        /home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/3.31.11/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:16 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /usr/bin/arm-none-eabi-g++ 
+      Build flags: -mcpu=cortex-m0plus;-mthumb
+      Id flags:  
+      
+      The output was:
+      1
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-exit.o): in function `exit':
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/stdlib/exit.c:65:(.text.exit+0x16): undefined reference to `_exit'
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: (_exit): Unknown destination type (ARM/Thumb) in /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-exit.o)
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/stdlib/exit.c:65:(.text.exit+0x16): dangerous relocation: unsupported relocation
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-closer.o): in function `_close_r':
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/reent/closer.c:47:(.text._close_r+0xc): undefined reference to `_close'
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: (_close): Unknown destination type (ARM/Thumb) in /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-closer.o)
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/reent/closer.c:47:(.text._close_r+0xc): dangerous relocation: unsupported relocation
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-lseekr.o): in function `_lseek_r':
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/reent/lseekr.c:49:(.text._lseek_r+0x10): undefined reference to `_lseek'
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: (_lseek): Unknown destination type (ARM/Thumb) in /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-lseekr.o)
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/reent/lseekr.c:49:(.text._lseek_r+0x10): dangerous relocation: unsupported relocation
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-readr.o): in function `_read_r':
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/reent/readr.c:49:(.text._read_r+0x10): undefined reference to `_read'
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: (_read): Unknown destination type (ARM/Thumb) in /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-readr.o)
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/reent/readr.c:49:(.text._read_r+0x10): dangerous relocation: unsupported relocation
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-writer.o): in function `_write_r':
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/reent/writer.c:49:(.text._write_r+0x10): undefined reference to `_write'
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: (_write): Unknown destination type (ARM/Thumb) in /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-writer.o)
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/reent/writer.c:49:(.text._write_r+0x10): dangerous relocation: unsupported relocation
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/reent/sbrkr.c:51:(.text._sbrk_r+0xc): undefined reference to `_sbrk'
+      /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: (_sbrk): Unknown destination type (ARM/Thumb) in /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libc.a(libc_a-sbrkr.o)
+      /builddir/build/BUILD/arm-none-eabi-newlib-4.5.0.20241231-build/newlib-4.5.0.20241231/build-newlib/arm-none-eabi/thumb/v6-m/nofp/newlib/../../../../../../newlib/libc/reent/sbrkr.c:51:(.text._sbrk_r+0xc): dangerous relocation: unsupported relocation
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:16 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/arm-none-eabi-g++ 
+      Build flags: -mcpu=cortex-m0plus;-mthumb
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/3.31.11/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerId.cmake:1238 (message)"
+      - "/usr/share/cmake/Modules/CMakeDetermineASMCompiler.cmake:135 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:16 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc (Fedora 15.2.0-1.fc43) 15.2.0
+      Copyright (C) 2025 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:16 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/CMakeScratch/TryCompile-k19rt0"
+      binary: "/home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/CMakeScratch/TryCompile-k19rt0"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-mcpu=cortex-m0plus -mthumb"
+      CMAKE_C_FLAGS_DEBUG: "-Og -g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/menadue/pico/pico-sdk/cmake"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/CMakeScratch/TryCompile-k19rt0'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b7222/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b7222.dir/build.make CMakeFiles/cmTC_b7222.dir/build
+        gmake[1]: Entering directory '/home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/CMakeScratch/TryCompile-k19rt0'
+        Building C object CMakeFiles/cmTC_b7222.dir/CMakeCCompilerABI.c.o
+        /usr/bin/arm-none-eabi-gcc   -mcpu=cortex-m0plus -mthumb  -std=gnu11   -v -o CMakeFiles/cmTC_b7222.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/arm-none-eabi-gcc
+        Target: arm-none-eabi
+        Configured with: ../gcc-15.2.0/configure --prefix=/usr --mandir=/usr/share/man --with-pkgversion='Fedora 15.2.0-1.fc43' --with-bugurl=https://bugzilla.redhat.com/ --infodir=/usr/share/info --target=arm-none-eabi --enable-interwork --enable-multilib --with-python-dir=share/arm-none-eabi/gcc-15.2.0/python --with-multilib-list=rmprofile --enable-plugins --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --enable-languages=c,c++ --with-newlib --disable-nls --disable-shared --disable-threads --with-gnu-as --with-gnu-ld --with-gmp --with-mpfr --with-mpc --with-headers=yes --with-system-zlib --with-sysroot=/usr/arm-none-eabi
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 15.2.0 (Fedora 15.2.0-1.fc43) 
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_b7222.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_b7222.dir/'
+         /usr/libexec/gcc/arm-none-eabi/15.2.0/cc1 -quiet -v -imultilib thumb/v6-m/nofp -D__USES_INITFINI__ /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_b7222.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -std=gnu11 -version -o /tmp/cctimnqK.s
+        GNU C11 (Fedora 15.2.0-1.fc43) version 15.2.0 (arm-none-eabi)
+        	compiled by GNU C version 15.2.1 20251111 (Red Hat 15.2.1-4), GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/arm-none-eabi/usr/local/include"
+        ignoring nonexistent directory "/usr/arm-none-eabi/usr/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/arm-none-eabi/15.2.0/include
+         /usr/lib/gcc/arm-none-eabi/15.2.0/include-fixed
+         /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include
+        End of search list.
+        Compiler executable checksum: 2022c844a5f84e523a838919ececa1bc
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_b7222.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_b7222.dir/'
+         /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_b7222.dir/CMakeCCompilerABI.c.o /tmp/cctimnqK.s
+        GNU assembler version 2.45 (arm-none-eabi) using BFD version (Fedora 2.45-1.fc43) 2.45
+        COMPILER_PATH=/usr/libexec/gcc/arm-none-eabi/15.2.0/:/usr/libexec/gcc/arm-none-eabi/15.2.0/:/usr/libexec/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/15.2.0/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=/usr/lib/gcc/arm-none-eabi/15.2.0/thumb/v6-m/nofp/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/usr/arm-none-eabi/lib/thumb/v6-m/nofp/:/usr/lib/gcc/arm-none-eabi/15.2.0/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/:/usr/arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_b7222.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_b7222.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_b7222.elf
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7222.dir/link.txt --verbose=1
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/arm-none-eabi-gcc
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/arm-none-eabi/15.2.0/lto-wrapper
+        Target: arm-none-eabi
+        Configured with: ../gcc-15.2.0/configure --prefix=/usr --mandir=/usr/share/man --with-pkgversion='Fedora 15.2.0-1.fc43' --with-bugurl=https://bugzilla.redhat.com/ --infodir=/usr/share/info --target=arm-none-eabi --enable-interwork --enable-multilib --with-python-dir=share/arm-none-eabi/gcc-15.2.0/python --with-multilib-list=rmprofile --enable-plugins --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --enable-languages=c,c++ --with-newlib --disable-nls --disable-shared --disable-threads --with-gnu-as --with-gnu-ld --with-gmp --with-mpfr --with-mpc --with-headers=yes --with-system-zlib --with-sysroot=/usr/arm-none-eabi
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 15.2.0 (Fedora 15.2.0-1.fc43) 
+        COMPILER_PATH=/usr/libexec/gcc/arm-none-eabi/15.2.0/:/usr/libexec/gcc/arm-none-eabi/15.2.0/:/usr/libexec/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/15.2.0/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=/usr/lib/gcc/arm-none-eabi/15.2.0/thumb/v6-m/nofp/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/usr/arm-none-eabi/lib/thumb/v6-m/nofp/:/usr/lib/gcc/arm-none-eabi/15.2.0/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/:/usr/arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_b7222.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_b7222.elf.'
+         /usr/libexec/gcc/arm-none-eabi/15.2.0/collect2 -plugin /usr/libexec/gcc/arm-none-eabi/15.2.0/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/arm-none-eabi/15.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWaQThR.res --sysroot=/usr/arm-none-eabi -X -o cmTC_b7222.elf -L/usr/lib/gcc/arm-none-eabi/15.2.0/thumb/v6-m/nofp -L/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/usr/arm-none-eabi/lib/thumb/v6-m/nofp -L/usr/lib/gcc/arm-none-eabi/15.2.0 -L/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib -L/usr/arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_b7222.dir/CMakeCCompilerABI.c.o
+        /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 00008000
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_b7222.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_b7222.elf.'
+        /usr/bin/arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb  -Wl,--build-id=none -nostdlib  -v CMakeFiles/cmTC_b7222.dir/CMakeCCompilerABI.c.o -o cmTC_b7222.elf
+        gmake[1]: Leaving directory '/home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/CMakeScratch/TryCompile-k19rt0'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:16 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/arm-none-eabi/15.2.0/include]
+          add: [/usr/lib/gcc/arm-none-eabi/15.2.0/include-fixed]
+          add: [/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/15.2.0/include] ==> [/usr/lib/gcc/arm-none-eabi/15.2.0/include]
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/15.2.0/include-fixed] ==> [/usr/lib/gcc/arm-none-eabi/15.2.0/include-fixed]
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include] ==> [/usr/arm-none-eabi/include]
+        implicit include dirs: [/usr/lib/gcc/arm-none-eabi/15.2.0/include;/usr/lib/gcc/arm-none-eabi/15.2.0/include-fixed;/usr/arm-none-eabi/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:16 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/CMakeScratch/TryCompile-k19rt0']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b7222/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_b7222.dir/build.make CMakeFiles/cmTC_b7222.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/CMakeScratch/TryCompile-k19rt0']
+        ignore line: [Building C object CMakeFiles/cmTC_b7222.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/arm-none-eabi-gcc   -mcpu=cortex-m0plus -mthumb  -std=gnu11   -v -o CMakeFiles/cmTC_b7222.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/arm-none-eabi-gcc]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: ../gcc-15.2.0/configure --prefix=/usr --mandir=/usr/share/man --with-pkgversion='Fedora 15.2.0-1.fc43' --with-bugurl=https://bugzilla.redhat.com/ --infodir=/usr/share/info --target=arm-none-eabi --enable-interwork --enable-multilib --with-python-dir=share/arm-none-eabi/gcc-15.2.0/python --with-multilib-list=rmprofile --enable-plugins --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --enable-languages=c,c++ --with-newlib --disable-nls --disable-shared --disable-threads --with-gnu-as --with-gnu-ld --with-gmp --with-mpfr --with-mpc --with-headers=yes --with-system-zlib --with-sysroot=/usr/arm-none-eabi]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 15.2.0 (Fedora 15.2.0-1.fc43) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_b7222.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_b7222.dir/']
+        ignore line: [ /usr/libexec/gcc/arm-none-eabi/15.2.0/cc1 -quiet -v -imultilib thumb/v6-m/nofp -D__USES_INITFINI__ /usr/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_b7222.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -std=gnu11 -version -o /tmp/cctimnqK.s]
+        ignore line: [GNU C11 (Fedora 15.2.0-1.fc43) version 15.2.0 (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 15.2.1 20251111 (Red Hat 15.2.1-4)  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/arm-none-eabi/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/usr/arm-none-eabi/usr/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/15.2.0/include]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/15.2.0/include-fixed]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 2022c844a5f84e523a838919ececa1bc]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_b7222.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_b7222.dir/']
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_b7222.dir/CMakeCCompilerABI.c.o /tmp/cctimnqK.s]
+        ignore line: [GNU assembler version 2.45 (arm-none-eabi) using BFD version (Fedora 2.45-1.fc43) 2.45]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/arm-none-eabi/15.2.0/:/usr/libexec/gcc/arm-none-eabi/15.2.0/:/usr/libexec/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/15.2.0/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-none-eabi/15.2.0/thumb/v6-m/nofp/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/usr/arm-none-eabi/lib/thumb/v6-m/nofp/:/usr/lib/gcc/arm-none-eabi/15.2.0/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/:/usr/arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu11' '-v' '-o' 'CMakeFiles/cmTC_b7222.dir/CMakeCCompilerABI.c.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_b7222.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_b7222.elf]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7222.dir/link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/arm-none-eabi-gcc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/arm-none-eabi/15.2.0/lto-wrapper]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: ../gcc-15.2.0/configure --prefix=/usr --mandir=/usr/share/man --with-pkgversion='Fedora 15.2.0-1.fc43' --with-bugurl=https://bugzilla.redhat.com/ --infodir=/usr/share/info --target=arm-none-eabi --enable-interwork --enable-multilib --with-python-dir=share/arm-none-eabi/gcc-15.2.0/python --with-multilib-list=rmprofile --enable-plugins --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --enable-languages=c,c++ --with-newlib --disable-nls --disable-shared --disable-threads --with-gnu-as --with-gnu-ld --with-gmp --with-mpfr --with-mpc --with-headers=yes --with-system-zlib --with-sysroot=/usr/arm-none-eabi]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 15.2.0 (Fedora 15.2.0-1.fc43) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/arm-none-eabi/15.2.0/:/usr/libexec/gcc/arm-none-eabi/15.2.0/:/usr/libexec/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/15.2.0/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-none-eabi/15.2.0/thumb/v6-m/nofp/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/usr/arm-none-eabi/lib/thumb/v6-m/nofp/:/usr/lib/gcc/arm-none-eabi/15.2.0/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/:/usr/arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_b7222.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_b7222.elf.']
+        link line: [ /usr/libexec/gcc/arm-none-eabi/15.2.0/collect2 -plugin /usr/libexec/gcc/arm-none-eabi/15.2.0/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/arm-none-eabi/15.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccWaQThR.res --sysroot=/usr/arm-none-eabi -X -o cmTC_b7222.elf -L/usr/lib/gcc/arm-none-eabi/15.2.0/thumb/v6-m/nofp -L/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/usr/arm-none-eabi/lib/thumb/v6-m/nofp -L/usr/lib/gcc/arm-none-eabi/15.2.0 -L/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib -L/usr/arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_b7222.dir/CMakeCCompilerABI.c.o]
+          arg [/usr/libexec/gcc/arm-none-eabi/15.2.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/libexec/gcc/arm-none-eabi/15.2.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/libexec/gcc/arm-none-eabi/15.2.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccWaQThR.res] ==> ignore
+          arg [--sysroot=/usr/arm-none-eabi] ==> ignore
+          arg [-X] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_b7222.elf] ==> ignore
+          arg [-L/usr/lib/gcc/arm-none-eabi/15.2.0/thumb/v6-m/nofp] ==> dir [/usr/lib/gcc/arm-none-eabi/15.2.0/thumb/v6-m/nofp]
+          arg [-L/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp]
+          arg [-L/usr/arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [/usr/arm-none-eabi/lib/thumb/v6-m/nofp]
+          arg [-L/usr/lib/gcc/arm-none-eabi/15.2.0] ==> dir [/usr/lib/gcc/arm-none-eabi/15.2.0]
+          arg [-L/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib] ==> dir [/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib]
+          arg [-L/usr/arm-none-eabi/lib] ==> dir [/usr/arm-none-eabi/lib]
+          arg [--build-id=none] ==> ignore
+          arg [CMakeFiles/cmTC_b7222.dir/CMakeCCompilerABI.c.o] ==> ignore
+        ignore line: [/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start]
+        ignore line: [ defaulting to 00008000]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_b7222.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_b7222.elf.']
+        ignore line: [/usr/bin/arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb  -Wl --build-id=none -nostdlib  -v CMakeFiles/cmTC_b7222.dir/CMakeCCompilerABI.c.o -o cmTC_b7222.elf]
+        ignore line: [gmake[1]: Leaving directory '/home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/CMakeScratch/TryCompile-k19rt0']
+        ignore line: []
+        ignore line: []
+        collapse library dir [/usr/lib/gcc/arm-none-eabi/15.2.0/thumb/v6-m/nofp] ==> [/usr/lib/gcc/arm-none-eabi/15.2.0/thumb/v6-m/nofp]
+        collapse library dir [/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp] ==> [/usr/arm-none-eabi/lib/thumb/v6-m/nofp]
+        collapse library dir [/usr/arm-none-eabi/lib/thumb/v6-m/nofp] ==> [/usr/arm-none-eabi/lib/thumb/v6-m/nofp]
+        collapse library dir [/usr/lib/gcc/arm-none-eabi/15.2.0] ==> [/usr/lib/gcc/arm-none-eabi/15.2.0]
+        collapse library dir [/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib] ==> [/usr/arm-none-eabi/lib]
+        collapse library dir [/usr/arm-none-eabi/lib] ==> [/usr/arm-none-eabi/lib]
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: [/usr/lib/gcc/arm-none-eabi/15.2.0/thumb/v6-m/nofp;/usr/arm-none-eabi/lib/thumb/v6-m/nofp;/usr/lib/gcc/arm-none-eabi/15.2.0;/usr/arm-none-eabi/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:16 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/CMakeScratch/TryCompile-iQ9mn8"
+      binary: "/home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/CMakeScratch/TryCompile-iQ9mn8"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-mcpu=cortex-m0plus -mthumb"
+      CMAKE_CXX_FLAGS_DEBUG: "-Og -g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/menadue/pico/pico-sdk/cmake"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/CMakeScratch/TryCompile-iQ9mn8'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_178a2/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_178a2.dir/build.make CMakeFiles/cmTC_178a2.dir/build
+        gmake[1]: Entering directory '/home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/CMakeScratch/TryCompile-iQ9mn8'
+        Building CXX object CMakeFiles/cmTC_178a2.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/arm-none-eabi-g++   -mcpu=cortex-m0plus -mthumb  -std=gnu++17   -v -o CMakeFiles/cmTC_178a2.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/arm-none-eabi-g++
+        Target: arm-none-eabi
+        Configured with: ../gcc-15.2.0/configure --prefix=/usr --mandir=/usr/share/man --with-pkgversion='Fedora 15.2.0-1.fc43' --with-bugurl=https://bugzilla.redhat.com/ --infodir=/usr/share/info --target=arm-none-eabi --enable-interwork --enable-multilib --with-python-dir=share/arm-none-eabi/gcc-15.2.0/python --with-multilib-list=rmprofile --enable-plugins --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --enable-languages=c,c++ --with-newlib --disable-nls --disable-shared --disable-threads --with-gnu-as --with-gnu-ld --with-gmp --with-mpfr --with-mpc --with-headers=yes --with-system-zlib --with-sysroot=/usr/arm-none-eabi
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 15.2.0 (Fedora 15.2.0-1.fc43) 
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu++17' '-v' '-o' 'CMakeFiles/cmTC_178a2.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_178a2.dir/'
+         /usr/libexec/gcc/arm-none-eabi/15.2.0/cc1plus -quiet -v -imultilib thumb/v6-m/nofp -D__USES_INITFINI__ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_178a2.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -std=gnu++17 -version -o /tmp/ccQgXKqH.s
+        GNU C++17 (Fedora 15.2.0-1.fc43) version 15.2.0 (arm-none-eabi)
+        	compiled by GNU C version 15.2.1 20251111 (Red Hat 15.2.1-4), GMP version 6.3.0, MPFR version 4.2.2, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/arm-none-eabi/usr/local/include"
+        ignoring nonexistent directory "/usr/arm-none-eabi/usr/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include/c++/15.2.0
+         /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include/c++/15.2.0/arm-none-eabi/thumb/v6-m/nofp
+         /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include/c++/15.2.0/backward
+         /usr/lib/gcc/arm-none-eabi/15.2.0/include
+         /usr/lib/gcc/arm-none-eabi/15.2.0/include-fixed
+         /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include
+        End of search list.
+        Compiler executable checksum: a0925d88022bec6058d02bb5da0251b6
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu++17' '-v' '-o' 'CMakeFiles/cmTC_178a2.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_178a2.dir/'
+         /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_178a2.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccQgXKqH.s
+        GNU assembler version 2.45 (arm-none-eabi) using BFD version (Fedora 2.45-1.fc43) 2.45
+        COMPILER_PATH=/usr/libexec/gcc/arm-none-eabi/15.2.0/:/usr/libexec/gcc/arm-none-eabi/15.2.0/:/usr/libexec/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/15.2.0/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=/usr/lib/gcc/arm-none-eabi/15.2.0/thumb/v6-m/nofp/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/usr/arm-none-eabi/lib/thumb/v6-m/nofp/:/usr/lib/gcc/arm-none-eabi/15.2.0/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/:/usr/arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu++17' '-v' '-o' 'CMakeFiles/cmTC_178a2.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_178a2.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_178a2.elf
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_178a2.dir/link.txt --verbose=1
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/arm-none-eabi-g++
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/arm-none-eabi/15.2.0/lto-wrapper
+        Target: arm-none-eabi
+        Configured with: ../gcc-15.2.0/configure --prefix=/usr --mandir=/usr/share/man --with-pkgversion='Fedora 15.2.0-1.fc43' --with-bugurl=https://bugzilla.redhat.com/ --infodir=/usr/share/info --target=arm-none-eabi --enable-interwork --enable-multilib --with-python-dir=share/arm-none-eabi/gcc-15.2.0/python --with-multilib-list=rmprofile --enable-plugins --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --enable-languages=c,c++ --with-newlib --disable-nls --disable-shared --disable-threads --with-gnu-as --with-gnu-ld --with-gmp --with-mpfr --with-mpc --with-headers=yes --with-system-zlib --with-sysroot=/usr/arm-none-eabi
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 15.2.0 (Fedora 15.2.0-1.fc43) 
+        COMPILER_PATH=/usr/libexec/gcc/arm-none-eabi/15.2.0/:/usr/libexec/gcc/arm-none-eabi/15.2.0/:/usr/libexec/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/15.2.0/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=/usr/lib/gcc/arm-none-eabi/15.2.0/thumb/v6-m/nofp/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/usr/arm-none-eabi/lib/thumb/v6-m/nofp/:/usr/lib/gcc/arm-none-eabi/15.2.0/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/:/usr/arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_178a2.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_178a2.elf.'
+         /usr/libexec/gcc/arm-none-eabi/15.2.0/collect2 -plugin /usr/libexec/gcc/arm-none-eabi/15.2.0/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/arm-none-eabi/15.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0a8khY.res --sysroot=/usr/arm-none-eabi -X -o cmTC_178a2.elf -L/usr/lib/gcc/arm-none-eabi/15.2.0/thumb/v6-m/nofp -L/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/usr/arm-none-eabi/lib/thumb/v6-m/nofp -L/usr/lib/gcc/arm-none-eabi/15.2.0 -L/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib -L/usr/arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_178a2.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 00008000
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_178a2.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_178a2.elf.'
+        /usr/bin/arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb  -Wl,--build-id=none -nostdlib  -v CMakeFiles/cmTC_178a2.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_178a2.elf
+        gmake[1]: Leaving directory '/home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/CMakeScratch/TryCompile-iQ9mn8'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:16 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include/c++/15.2.0]
+          add: [/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include/c++/15.2.0/arm-none-eabi/thumb/v6-m/nofp]
+          add: [/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include/c++/15.2.0/backward]
+          add: [/usr/lib/gcc/arm-none-eabi/15.2.0/include]
+          add: [/usr/lib/gcc/arm-none-eabi/15.2.0/include-fixed]
+          add: [/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include/c++/15.2.0] ==> [/usr/arm-none-eabi/include/c++/15.2.0]
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include/c++/15.2.0/arm-none-eabi/thumb/v6-m/nofp] ==> [/usr/arm-none-eabi/include/c++/15.2.0/arm-none-eabi/thumb/v6-m/nofp]
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include/c++/15.2.0/backward] ==> [/usr/arm-none-eabi/include/c++/15.2.0/backward]
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/15.2.0/include] ==> [/usr/lib/gcc/arm-none-eabi/15.2.0/include]
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/15.2.0/include-fixed] ==> [/usr/lib/gcc/arm-none-eabi/15.2.0/include-fixed]
+        collapse include dir [/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include] ==> [/usr/arm-none-eabi/include]
+        implicit include dirs: [/usr/arm-none-eabi/include/c++/15.2.0;/usr/arm-none-eabi/include/c++/15.2.0/arm-none-eabi/thumb/v6-m/nofp;/usr/arm-none-eabi/include/c++/15.2.0/backward;/usr/lib/gcc/arm-none-eabi/15.2.0/include;/usr/lib/gcc/arm-none-eabi/15.2.0/include-fixed;/usr/arm-none-eabi/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "/usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:16 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/CMakeScratch/TryCompile-iQ9mn8']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_178a2/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_178a2.dir/build.make CMakeFiles/cmTC_178a2.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/CMakeScratch/TryCompile-iQ9mn8']
+        ignore line: [Building CXX object CMakeFiles/cmTC_178a2.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/arm-none-eabi-g++   -mcpu=cortex-m0plus -mthumb  -std=gnu++17   -v -o CMakeFiles/cmTC_178a2.dir/CMakeCXXCompilerABI.cpp.o -c /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/arm-none-eabi-g++]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: ../gcc-15.2.0/configure --prefix=/usr --mandir=/usr/share/man --with-pkgversion='Fedora 15.2.0-1.fc43' --with-bugurl=https://bugzilla.redhat.com/ --infodir=/usr/share/info --target=arm-none-eabi --enable-interwork --enable-multilib --with-python-dir=share/arm-none-eabi/gcc-15.2.0/python --with-multilib-list=rmprofile --enable-plugins --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --enable-languages=c,c++ --with-newlib --disable-nls --disable-shared --disable-threads --with-gnu-as --with-gnu-ld --with-gmp --with-mpfr --with-mpc --with-headers=yes --with-system-zlib --with-sysroot=/usr/arm-none-eabi]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 15.2.0 (Fedora 15.2.0-1.fc43) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu++17' '-v' '-o' 'CMakeFiles/cmTC_178a2.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_178a2.dir/']
+        ignore line: [ /usr/libexec/gcc/arm-none-eabi/15.2.0/cc1plus -quiet -v -imultilib thumb/v6-m/nofp -D__USES_INITFINI__ /usr/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_178a2.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -std=gnu++17 -version -o /tmp/ccQgXKqH.s]
+        ignore line: [GNU C++17 (Fedora 15.2.0-1.fc43) version 15.2.0 (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 15.2.1 20251111 (Red Hat 15.2.1-4)  GMP version 6.3.0  MPFR version 4.2.2  MPC version 1.3.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/arm-none-eabi/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/usr/arm-none-eabi/usr/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include/c++/15.2.0]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include/c++/15.2.0/arm-none-eabi/thumb/v6-m/nofp]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include/c++/15.2.0/backward]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/15.2.0/include]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/15.2.0/include-fixed]
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: a0925d88022bec6058d02bb5da0251b6]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu++17' '-v' '-o' 'CMakeFiles/cmTC_178a2.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_178a2.dir/']
+        ignore line: [ /usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_178a2.dir/CMakeCXXCompilerABI.cpp.o /tmp/ccQgXKqH.s]
+        ignore line: [GNU assembler version 2.45 (arm-none-eabi) using BFD version (Fedora 2.45-1.fc43) 2.45]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/arm-none-eabi/15.2.0/:/usr/libexec/gcc/arm-none-eabi/15.2.0/:/usr/libexec/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/15.2.0/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-none-eabi/15.2.0/thumb/v6-m/nofp/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/usr/arm-none-eabi/lib/thumb/v6-m/nofp/:/usr/lib/gcc/arm-none-eabi/15.2.0/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/:/usr/arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-std=gnu++17' '-v' '-o' 'CMakeFiles/cmTC_178a2.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_178a2.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_178a2.elf]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_178a2.dir/link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/usr/bin/arm-none-eabi-g++]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/arm-none-eabi/15.2.0/lto-wrapper]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: ../gcc-15.2.0/configure --prefix=/usr --mandir=/usr/share/man --with-pkgversion='Fedora 15.2.0-1.fc43' --with-bugurl=https://bugzilla.redhat.com/ --infodir=/usr/share/info --target=arm-none-eabi --enable-interwork --enable-multilib --with-python-dir=share/arm-none-eabi/gcc-15.2.0/python --with-multilib-list=rmprofile --enable-plugins --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --enable-languages=c,c++ --with-newlib --disable-nls --disable-shared --disable-threads --with-gnu-as --with-gnu-ld --with-gmp --with-mpfr --with-mpc --with-headers=yes --with-system-zlib --with-sysroot=/usr/arm-none-eabi]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 15.2.0 (Fedora 15.2.0-1.fc43) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/arm-none-eabi/15.2.0/:/usr/libexec/gcc/arm-none-eabi/15.2.0/:/usr/libexec/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/15.2.0/:/usr/lib/gcc/arm-none-eabi/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/arm-none-eabi/15.2.0/thumb/v6-m/nofp/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/usr/arm-none-eabi/lib/thumb/v6-m/nofp/:/usr/lib/gcc/arm-none-eabi/15.2.0/:/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/:/usr/arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_178a2.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_178a2.elf.']
+        link line: [ /usr/libexec/gcc/arm-none-eabi/15.2.0/collect2 -plugin /usr/libexec/gcc/arm-none-eabi/15.2.0/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/arm-none-eabi/15.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/cc0a8khY.res --sysroot=/usr/arm-none-eabi -X -o cmTC_178a2.elf -L/usr/lib/gcc/arm-none-eabi/15.2.0/thumb/v6-m/nofp -L/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/usr/arm-none-eabi/lib/thumb/v6-m/nofp -L/usr/lib/gcc/arm-none-eabi/15.2.0 -L/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib -L/usr/arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_178a2.dir/CMakeCXXCompilerABI.cpp.o]
+          arg [/usr/libexec/gcc/arm-none-eabi/15.2.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/libexec/gcc/arm-none-eabi/15.2.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/libexec/gcc/arm-none-eabi/15.2.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/cc0a8khY.res] ==> ignore
+          arg [--sysroot=/usr/arm-none-eabi] ==> ignore
+          arg [-X] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_178a2.elf] ==> ignore
+          arg [-L/usr/lib/gcc/arm-none-eabi/15.2.0/thumb/v6-m/nofp] ==> dir [/usr/lib/gcc/arm-none-eabi/15.2.0/thumb/v6-m/nofp]
+          arg [-L/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp]
+          arg [-L/usr/arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [/usr/arm-none-eabi/lib/thumb/v6-m/nofp]
+          arg [-L/usr/lib/gcc/arm-none-eabi/15.2.0] ==> dir [/usr/lib/gcc/arm-none-eabi/15.2.0]
+          arg [-L/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib] ==> dir [/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib]
+          arg [-L/usr/arm-none-eabi/lib] ==> dir [/usr/arm-none-eabi/lib]
+          arg [--build-id=none] ==> ignore
+          arg [CMakeFiles/cmTC_178a2.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+        ignore line: [/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start]
+        ignore line: [ defaulting to 00008000]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_178a2.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_178a2.elf.']
+        ignore line: [/usr/bin/arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb  -Wl --build-id=none -nostdlib  -v CMakeFiles/cmTC_178a2.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_178a2.elf]
+        ignore line: [gmake[1]: Leaving directory '/home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/CMakeScratch/TryCompile-iQ9mn8']
+        ignore line: []
+        ignore line: []
+        collapse library dir [/usr/lib/gcc/arm-none-eabi/15.2.0/thumb/v6-m/nofp] ==> [/usr/lib/gcc/arm-none-eabi/15.2.0/thumb/v6-m/nofp]
+        collapse library dir [/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib/thumb/v6-m/nofp] ==> [/usr/arm-none-eabi/lib/thumb/v6-m/nofp]
+        collapse library dir [/usr/arm-none-eabi/lib/thumb/v6-m/nofp] ==> [/usr/arm-none-eabi/lib/thumb/v6-m/nofp]
+        collapse library dir [/usr/lib/gcc/arm-none-eabi/15.2.0] ==> [/usr/lib/gcc/arm-none-eabi/15.2.0]
+        collapse library dir [/usr/lib/gcc/arm-none-eabi/15.2.0/../../../../arm-none-eabi/lib] ==> [/usr/arm-none-eabi/lib]
+        collapse library dir [/usr/arm-none-eabi/lib] ==> [/usr/arm-none-eabi/lib]
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: [/usr/lib/gcc/arm-none-eabi/15.2.0/thumb/v6-m/nofp;/usr/arm-none-eabi/lib/thumb/v6-m/nofp;/usr/lib/gcc/arm-none-eabi/15.2.0;/usr/arm-none-eabi/lib]
+        implicit fwks: []
+      
+      
+...

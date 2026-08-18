@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/picotoolBuild"
+		},
+		{
+			"file" : "/home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/picotoolBuild.rule"
+		},
+		{
+			"file" : "/home/menadue/tree/github/pico-rom-emulator/code/build/CMakeFiles/picotoolBuild-complete.rule"
+		},
+		{
+			"file" : "/home/menadue/tree/github/pico-rom-emulator/code/build/picotool/src/picotoolBuild-stamp/picotoolBuild-build.rule"
+		},
+		{
+			"file" : "/home/menadue/tree/github/pico-rom-emulator/code/build/picotool/src/picotoolBuild-stamp/picotoolBuild-configure.rule"
+		},
+		{
+			"file" : "/home/menadue/tree/github/pico-rom-emulator/code/build/picotool/src/picotoolBuild-stamp/picotoolBuild-download.rule"
+		},
+		{
+			"file" : "/home/menadue/tree/github/pico-rom-emulator/code/build/picotool/src/picotoolBuild-stamp/picotoolBuild-install.rule"
+		},
+		{
+			"file" : "/home/menadue/tree/github/pico-rom-emulator/code/build/picotool/src/picotoolBuild-stamp/picotoolBuild-mkdir.rule"
+		},
+		{
+			"file" : "/home/menadue/tree/github/pico-rom-emulator/code/build/picotool/src/picotoolBuild-stamp/picotoolBuild-patch.rule"
+		},
+		{
+			"file" : "/home/menadue/tree/github/pico-rom-emulator/code/build/picotool/src/picotoolBuild-stamp/picotoolBuild-test.rule"
+		},
+		{
+			"file" : "/home/menadue/tree/github/pico-rom-emulator/code/build/picotool/src/picotoolBuild-stamp/picotoolBuild-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"picotoolBuild"
+		],
+		"name" : "picotoolBuild"
+	}
+}
